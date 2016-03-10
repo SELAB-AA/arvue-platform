@@ -1,0 +1,13 @@
+grant {
+	permission java.net.SocketPermission "*", "connect, accept, listen";
+	permission java.util.PropertyPermission "accessKey", "read";
+	permission java.util.PropertyPermission "privateKey", "read";
+	permission java.util.PropertyPermission "com.amazonaws.sdk.enableRuntimeProfiling", "read";
+	permission java.util.PropertyPermission "log4j.*", "read";
+	permission java.io.FilePermission "/tmp/haproxy.pid", "read, write, delete";
+	permission java.io.FilePermission "/tmp/haproxy.conf", "read, write";
+	permission java.io.FilePermission "/usr/sbin/haproxy", "execute";
+	permission java.io.FilePermission "/usr/bin/kill", "execute";
+	permission java.lang.RuntimePermission "shutdownHooks";
+	permission java.security.AllPermission;
+};
